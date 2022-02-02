@@ -1,0 +1,31 @@
+<ion-content>
+  <ion-item>
+    <ion-label>Pdf 1</ion-label>
+    <input type="file" (change)="setPdfSrc($event, 1)" />
+  </ion-item>
+  <ion-item>
+    <ion-label>Pdf 2</ion-label>
+    <input type="file" (change)="setPdfSrc($event, 2)" />
+  </ion-item>
+
+  <ion-button (click)="togglePdfVis()">Toggle</ion-button>
+  <ion-button (click)="turnPage(false)">Prev</ion-button>
+  <ion-button (click)="turnPage(true)">Next</ion-button>
+  <pdf-viewer
+    *ngIf="pdfVis"
+    [src]="pdf1Src"
+    [(page)]="pdf1Page"
+    [render-text]="true"
+    [original-size]="false"
+    style="width: 400px; height: 500px"
+  ></pdf-viewer>
+
+  <pdf-viewer
+    *ngIf="!pdfVis"
+    [src]="pdf2Src"
+    [page]="getPdf2Page()"
+    [render-text]="true"
+    [original-size]="false"
+    style="width: 400px; height: 500px"
+  ></pdf-viewer>
+</ion-content>
