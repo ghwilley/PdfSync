@@ -1,0 +1,11 @@
+#pdf1 {
+  position: absolute;
+}
+#pdf2 {
+  position: absolute;
+}
+
+body {
+  max-width: max-content;
+  margin: auto;
+}

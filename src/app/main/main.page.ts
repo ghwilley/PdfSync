@@ -9,6 +9,8 @@ export class MainPage implements OnInit {
   pdf1Src: string = '';
   pdf2Src: string = '';
   pdf1Page: number = 1;
+  pdf1ZIndex: number = 1;
+  pdf2ZIndex: number = 0;
   pdf2PageModifier: number = 0;
   pdfVis: boolean = true;
   constructor() {}
@@ -29,7 +31,8 @@ export class MainPage implements OnInit {
   }
 
   togglePdfVis() {
-    this.pdfVis = !this.pdfVis;
+    this.pdf1ZIndex = 1 - this.pdf1ZIndex;
+    this.pdf2ZIndex = 1 - this.pdf2ZIndex;
   }
 
   turnPage(increment: boolean) {

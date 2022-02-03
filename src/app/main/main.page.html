@@ -12,20 +12,22 @@
   <ion-button (click)="turnPage(false)">Prev</ion-button>
   <ion-button (click)="turnPage(true)">Next</ion-button>
   <pdf-viewer
-    *ngIf="pdfVis"
+    id="pdf1"
     [src]="pdf1Src"
     [(page)]="pdf1Page"
     [render-text]="true"
     [original-size]="false"
     style="width: 400px; height: 500px"
+    [style.z-index]="pdf1ZIndex"
   ></pdf-viewer>
 
   <pdf-viewer
-    *ngIf="!pdfVis"
+    id="pdf2"
     [src]="pdf2Src"
     [page]="getPdf2Page()"
     [render-text]="true"
     [original-size]="false"
     style="width: 400px; height: 500px"
+    [style.z-index]="pdf2ZIndex"
   ></pdf-viewer>
 </ion-content>
