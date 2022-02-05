@@ -29,8 +29,9 @@
     [src]="pdf1Src"
     [(page)]="pdf1Page"
     [render-text]="true"
-    [original-size]="false"
-    style="width: 400px; height: 500px"
+    [original-size]="true"
+    [fit-to-page]="false"
+    style="width: 100vw; height: 100vh"
     [style.z-index]="pdf1ZIndex"
   ></pdf-viewer>
 
@@ -39,8 +40,8 @@
     [src]="pdf2Src"
     [page]="getPdf2Page()"
     [render-text]="true"
-    [original-size]="false"
-    style="width: 400px; height: 500px"
+    [original-size]="true"
+    style="width: 100vw; height: 100vh"
     [style.z-index]="pdf2ZIndex"
   ></pdf-viewer>
 </ion-content>
