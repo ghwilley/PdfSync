@@ -13,6 +13,8 @@ export class MainPage implements OnInit {
   pdf2ZIndex: number = 0;
   pdf2PageModifier: number = 0;
   pdfVis: boolean = true;
+  showSettings: boolean = false;
+
   constructor() {}
 
   ngOnInit() {}
@@ -41,5 +43,9 @@ export class MainPage implements OnInit {
     } else {
       this.pdf1Page--;
     }
+  }
+
+  toggleSettings() {
+    this.showSettings = !this.showSettings;
   }
 }

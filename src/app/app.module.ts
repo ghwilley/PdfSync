@@ -17,7 +17,8 @@ import { MainPage } from './main/main.page';
     AppRoutingModule,
     IonicModule,
     RouterModule,
-    MainPageModule
+    MainPageModule,
+    IonicModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],

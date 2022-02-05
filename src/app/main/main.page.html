@@ -7,10 +7,23 @@
     <ion-label>Pdf 2</ion-label>
     <input type="file" (change)="setPdfSrc($event, 2)" />
   </ion-item>
-
   <ion-button (click)="togglePdfVis()">Toggle</ion-button>
   <ion-button (click)="turnPage(false)">Prev</ion-button>
   <ion-button (click)="turnPage(true)">Next</ion-button>
+  <ion-button (click)="toggleSettings()">Show Settings</ion-button>
+  <ion-list [hidden]="!showSettings">
+    <ion-item>
+      <ion-label>Page Offset</ion-label>
+      <ion-input
+        type="number"
+        value="0"
+        [(ngModel)]="pdf2PageModifier"
+      ></ion-input>
+
+      <!--  <ion-label>Pepperoni</ion-label>
+        <ion-toggle [(ngModel)]="pepperoni"></ion-toggle> -->
+    </ion-item>
+  </ion-list>
   <pdf-viewer
     id="pdf1"
     [src]="pdf1Src"
